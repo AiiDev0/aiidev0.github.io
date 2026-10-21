@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacidad | Aiberson</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { dark: '#0a0a0c', border: 'rgba(255,255,255,0.08)', accent: '#8b5cf6' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-dark text-gray-100 font-sans antialiased relative flex flex-col min-h-screen">
+    <nav class="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold font-mono text-accent">AM<span class="text-gray-100">.dev</span></a>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto px-6 pt-32 pb-20 flex-grow w-full">
+        <h1 class="text-4xl font-extrabold mb-8">Aviso de Privacidad</h1>
+        <div class="space-y-4 text-gray-400">
+            <p>Este sitio web personal no utiliza cookies de rastreo, ni recolecta información personal de los visitantes.</p>
+            <p>Los enlaces externos presentes en este portafolio (como Gumroad o Discord) se rigen por las políticas de privacidad y términos de servicio de dichas plataformas.</p>
+            <p>Si decides contactarme por correo electrónico, tu dirección solo será utilizada para responderte y no será compartida con terceros.</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w-full py-8 border-t border-border bg-[#0a0a0c]/50 backdrop-blur-sm relative z-10 mt-auto">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+            <p>&copy; 2026 Aiberson Montilla. Todos los derechos reservados.</p>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-accent transition-colors">Privacidad</a>
+                <a href="../contacto/index.html" class="hover:text-accent transition-colors">Contacto</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
