@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envy-Core | Aiberson</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { dark: '#0a0a0c', card: 'rgba(255,255,255,0.03)', border: 'rgba(255,255,255,0.08)', accent: '#8b5cf6' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-dark text-gray-100 font-sans antialiased overflow-x-hidden relative flex flex-col min-h-screen">
+    <div id="glow" class="fixed pointer-events-none w-[600px] h-[600px] rounded-full z-0 opacity-0 transition-opacity duration-300"></div>
+
+    <nav class="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold font-mono text-accent">AM<span class="text-gray-100">.dev</span></a>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="../proyectos/index.html" class="hover:text-accent transition-colors">Proyectos</a>
+                <a href="../contacto/index.html" class="hover:text-accent transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto px-6 relative z-10 pt-32 pb-20 flex-grow w-full">
+        <div class="mb-12">
+            <a href="../proyectos/index.html" class="text-sm text-gray-400 hover:text-accent transition-colors flex items-center gap-2 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Volver a proyectos
+            </a>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">🛡️ Envy-Core</h1>
+            <p class="text-xl text-gray-400 max-w-3xl">La suite de seguridad definitiva para tus variables de entorno en Node.js.</p>
+        </div>
+        
+        <!-- Galería de Capturas (Ahora con 3 columnas) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+            <div class="project-card p-2">
+                <img src="../assets/capturas/envy-errors.png" alt="Errores de Validación" class="rounded-xl w-full h-auto object-cover">
+            </div>
+            <div class="project-card p-2">
+                <img src="../assets/capturas/envy-prod.png" alt="Bloqueo de Producción" class="rounded-xl w-full h-auto object-cover">
+            </div>
+            <div class="project-card p-2">
+                <img src="../assets/capturas/envy-ping.png" alt="Health Check APIs" class="rounded-xl w-full h-auto object-cover">
+            </div>
+        </div>
+
+        <!-- Características -->
+        <div class="bg-[#0f0f13] border border-border rounded-2xl p-8 md:p-10 mb-12 shadow-2xl">
+            <h2 class="text-2xl font-bold mb-8 font-mono text-accent flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                Características Principales
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <ul class="space-y-4 text-gray-300 text-sm">
+                    <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✦</span><div><strong class="text-white">Validación de Tipos:</strong> Asegura que tus puertos sean números, URLs válidas y correos correctos.</div></li>
+                    <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✦</span><div><strong class="text-white">Generación de TypeScript:</strong> Crea un archivo <code>env.d.ts</code> para autocompletado en VS Code.</div></li>
+                    <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✦</span><div><strong class="text-white">Inicialización Rápida:</strong> Genera un <code>.env.example</code> seguro a partir de tu <code>.env</code> real.</div></li>
+                    <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✦</span><div><strong class="text-white">Detección de Duplicados:</strong> Te avisa si declaraste la misma variable dos veces.</div></li>
+                </ul>
+                <ul class="space-y-4 text-gray-300 text-sm">
+                    <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✦</span><div><strong class="text-white">Auditoría de Seguridad (PRO):</strong> Detecta contraseñas débiles y credenciales expuestas.</div></li>
+                    <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✦</span><div><strong class="text-white">Bloqueo de Producción (PRO):</strong> Evita el arranque si detecta <code>localhost</code> en producción.</div></li>
+                    <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✦</span><div><strong class="text-white">Encriptación AES-256 (PRO):</strong> Encripta tu <code>.env</code> con una clave maestra.</div></li>
+                    <li class="flex items-start gap-3"><span class="text-accent mt-0.5">✦</span><div><strong class="text-white">Escáner de Git (PRO):</strong> Revisa tu historial de commits en busca de <code>.env</code> filtrados.</div></li>
+                </ul>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-border">
+                <p class="text-xs text-gray-500 font-mono">
+                    // Arquitectura: Node.js + TypeScript + Crypto (AES-256) + Commander.js.
+                </p>
+            </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="text-center bg-card border border-border rounded-2xl p-10">
+            <h3 class="text-2xl font-bold mb-2">¿Listo para proteger tu entorno?</h3>
+            <p class="text-gray-400 mb-6">Elige la versión que mejor se adapte a tus necesidades.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://www.npmjs.com/package/envy-core" target="_blank" class="btn-secondary text-lg px-8 py-4 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    Instalar Gratis (NPM)
+                </a>
+                <a href="https://aiberson.gumroad.com/l/envy-core-pro" target="_blank" class="btn-primary text-lg px-8 py-4 shadow-lg shadow-accent/20 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    Comprar PRO (Gumroad)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-full py-8 border-t border-border bg-[#0a0a0c]/50 backdrop-blur-sm relative z-10 mt-auto">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+            <p>&copy; 2026 Aiberson Montilla. Todos los derechos reservados.</p>
+            <div class="flex gap-6">
+                <a href="../privacidad/index.html" class="hover:text-accent transition-colors">Privacidad</a>
+                <a href="../contacto/index.html" class="hover:text-accent transition-colors">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
